@@ -11,7 +11,7 @@ function check_L_field(urlStr, done) {
           assert.equal(200, response.statusCode); // make sure that success response is received
           var jsonObj = body.replace(/\//g, ""); //Sanitize Json object. Remove "\" characters present in API
           jsonObj = JSON.parse(jsonObj);
-		  assert.equal(1, jsonObj[0].hasOwnProperty('l')); // assert for L field in Json
+          assert.equal(1, jsonObj[0].hasOwnProperty('l')); // assert for L field in Json
           done(); //wait till this asynchornous callback is executed
         });
 }
